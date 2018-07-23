@@ -806,7 +806,8 @@ class DateTime
             return Functions::VALUE();
         }
 
-        if (!is_bool($method)) {
+        //if (!is_bool($method)) {
+        if (!filter_var($method, FILTER_VALIDATE_BOOLEAN)) {
             return Functions::VALUE();
         }
 
